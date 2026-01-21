@@ -1,0 +1,1 @@
+export function initApp(): void {}
