@@ -1,0 +1,64 @@
+@import 'tailwindcss';
+@config '../tailwind.config.js';
+
+@layer base {
+  html,
+  body,
+  #app {
+    @apply h-full;
+  }
+
+  body {
+    @apply m-0 min-h-dvh bg-surface font-sans text-text antialiased lg:bg-background;
+  }
+
+  #app {
+    @apply flex min-h-dvh flex-col;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply h-14 w-full rounded-sm bg-primary text-base font-medium text-white transition-colors duration-200 hover:bg-primary-hover;
+  }
+
+  .btn-outline {
+    @apply h-14 rounded-sm border border-primary bg-surface text-base font-medium text-primary transition-colors duration-200 hover:bg-primary/10;
+  }
+
+  .page {
+    @apply flex min-h-dvh w-full grow shrink-0 flex-col px-4 pb-4 pt-10 lg:justify-center lg:px-8 lg:py-12 xl:justify-start xl:px-16;
+  }
+
+  .page-shell {
+    @apply mx-auto flex w-full max-w-md flex-1 flex-col lg:max-w-[704px] lg:flex-none lg:items-center lg:gap-5;
+  }
+
+  .panel {
+    @apply w-full lg:max-w-[524px] lg:rounded-md lg:bg-surface lg:p-8 lg:shadow-e2 xl:max-w-[558px];
+  }
+
+  .panel-fill {
+    @apply flex-1 lg:flex-none;
+  }
+
+  .field {
+    @apply w-full appearance-none rounded-sm border border-border bg-surface px-4 py-3 text-base text-text outline-none transition-colors duration-200 placeholder:text-text-secondary hover:border-primary/40 focus:border-primary focus:ring-1 focus:ring-primary aria-expanded:border-primary aria-expanded:ring-1 aria-expanded:ring-primary aria-invalid:border-error aria-invalid:ring-1 aria-invalid:ring-error;
+  }
+
+  .heading-1 {
+    @apply text-[32px] font-bold leading-[120%];
+  }
+
+  .heading-2 {
+    @apply text-2xl font-semibold leading-[120%];
+  }
+
+  .body-accent {
+    @apply text-base font-medium leading-[150%];
+  }
+
+  .caption {
+    @apply text-xs font-normal leading-none text-text-secondary;
+  }
+}
